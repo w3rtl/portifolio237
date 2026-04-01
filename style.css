@@ -809,19 +809,100 @@ footer{
 
 /* ── RESPONSIVE ──────────────────────────────── */
 @media(max-width:768px){
+  /* cursor off */
   body{cursor:auto}
   #cur,#cur-ring,.cur-trail{display:none}
-  #topbar{padding:.75rem 1.25rem}
-  .tb-right{gap:1.25rem}
-  #hero{padding:5rem 1.25rem 1.5rem}
+
+  /* ── topbar ──────────────────────────────── */
+  #topbar{padding:.7rem 1.1rem}
+  /* esconde o subtítulo "// Perfil de Desenvolvedor" para não vazar */
+  .tb-left>span:last-of-type{display:none}
+  .tb-right{gap:.9rem;font-size:.58rem}
+
+  /* ── hero ────────────────────────────────── */
+  #hero{padding:5rem 1.25rem 2rem}
   .hero-widgets{display:none}
-  .hero-name{font-size:clamp(3.5rem,18vw,6rem)}
+  .hero-name{font-size:clamp(3.2rem,17vw,6rem)}
+  /* stamp: compacta o padding e o tracking */
+  .stamp{font-size:.52rem;letter-spacing:.12em;padding:.28rem .65rem}
+  /* meta: empilha role + coords verticalmente */
+  .hero-meta{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1rem;
+    padding-top:1.25rem;
+  }
+  .hero-role{font-size:.68rem;letter-spacing:.1em;max-width:100%}
+  .hero-coords{text-align:left;font-size:.58rem}
+
+  /* ── sections ────────────────────────────── */
   .sec{padding:3.5rem 1.25rem}
-  #sobre .inner{grid-template-columns:1fr}
+  .sec-label{letter-spacing:.14em;font-size:.56rem}
+
+  /* ── sobre ───────────────────────────────── */
+  #sobre .inner{grid-template-columns:1fr;gap:2.5rem}
+  .sobre-text p{font-size:.95rem}
+
+  /* ── habilidades ─────────────────────────── */
   #habilidades .skill-blocks{grid-template-columns:1fr}
+  .skill-block{padding:1.5rem 1.25rem}
+
+  /* ── projetos ────────────────────────────── */
   #projetos .proj-list{grid-template-columns:1fr}
-  .contact-wrap{grid-template-columns:1fr}
-  .tl-item{grid-template-columns:1fr;gap:.5rem}
+  .proj-item{padding:2rem 1.5rem}
+  .proj-name{font-size:clamp(2rem,8vw,3rem)}
+
+  /* ── formação ────────────────────────────── */
+  .tl-item{grid-template-columns:1fr;gap:.35rem;padding:1.5rem 0}
   .tl-item::before{display:none}
-  footer{flex-direction:column;gap:.75rem;text-align:center}
+  /* ano e duração ficam lado a lado na mesma linha */
+  .tl-left{
+    display:flex;align-items:baseline;
+    gap:.6rem;flex-wrap:wrap;
+    padding-top:0;
+  }
+  .tl-left .tl-year{
+    font-size:.8rem;margin-bottom:0;display:inline;
+  }
+  .tl-course{font-size:1.3rem}
+
+  /* ── contato ─────────────────────────────── */
+  .contact-wrap{grid-template-columns:1fr;gap:2.5rem}
+  .contact-cta{font-size:clamp(2.8rem,13vw,5rem);margin-bottom:1.25rem}
+  .clink{padding:1.1rem 1.25rem}
+
+  /* ── footer ──────────────────────────────── */
+  footer{flex-direction:column;gap:.75rem;text-align:center;padding:1.25rem 1.25rem}
+}
+
+/* ── telas muito pequenas (< 420 px) ────────── */
+@media(max-width:420px){
+  /* topbar: esconde também o "PBR-SYS v2.5" deixando só o dot + nav */
+  .tb-sys{display:none}
+  .tb-right{gap:.65rem;font-size:.54rem}
+  #topbar{padding:.65rem 1rem}
+
+  /* hero */
+  #hero{padding:4.5rem 1rem 1.75rem}
+  .hero-name{font-size:clamp(2.8rem,16vw,5rem)}
+  .stamp{font-size:.48rem;letter-spacing:.1em}
+  .hero-role{font-size:.62rem}
+
+  /* sections */
+  .sec{padding:3rem 1rem}
+  .sec-label{font-size:.52rem;letter-spacing:.12em}
+
+  /* projetos */
+  .proj-item{padding:1.5rem 1rem}
+
+  /* skill rows */
+  .skill-block{padding:1.25rem 1rem}
+
+  /* contato */
+  .contact-cta{font-size:clamp(2.4rem,12vw,3.5rem)}
+  .clink{padding:.9rem 1rem}
+  .cl-val{font-size:.75rem}
+
+  /* footer */
+  footer{font-size:.52rem}
 }
