@@ -145,7 +145,7 @@
 
 /* ── REVEAL ON SCROLL ────────────────────────── */
 (function initReveal() {
-  const items = document.querySelectorAll('.reveal, .reveal-l');
+  const items = document.querySelectorAll('.reveal, .reveal-l, .reveal-r, .reveal-scale, .reveal-blur');
   if (!items.length) return;
 
   const io = new IntersectionObserver(entries => {
@@ -158,6 +158,23 @@
   }, { threshold: 0.12 });
 
   items.forEach(el => io.observe(el));
+})();
+
+/* ── SECTION LABEL LINE-DRAW ────────────────── */
+(function initSectionLabels() {
+  const labels = document.querySelectorAll('.sec-label');
+  if (!labels.length) return;
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('on');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  labels.forEach(el => io.observe(el));
 })();
 
 /* ── SKILL BARS ──────────────────────────────── */
