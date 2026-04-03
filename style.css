@@ -306,7 +306,7 @@ body.hov #cur-ring{width:44px;height:44px;border-color:var(--accent);box-shadow:
   animation:slideUp .9s cubic-bezier(.16,1,.3,1) both;
 }
 .hero-name .line:nth-child(1) span{animation-delay:1.4s}
-.hero-name .line:nth-child(2) span{animation-delay:1.5s;color:var(--accent)}
+.hero-name .line:nth-child(2) span{animation:none;transform:translateY(0);color:var(--accent)}
 .hero-name .line:nth-child(3) span{animation-delay:1.6s}
 @keyframes slideUp{to{transform:translateY(0)}}
 
