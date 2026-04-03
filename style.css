@@ -813,6 +813,233 @@ footer{
 .reveal:nth-child(3){transition-delay:.16s}
 .reveal:nth-child(4){transition-delay:.24s}
 
+/* ══════════════════════════════════════════════
+   PÁGINA DE CERTIFICADOS
+══════════════════════════════════════════════ */
+
+/* hero da página de certificados */
+#cert-hero{
+  min-height:60vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:8rem 2rem 3rem;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+.cert-hero-inner{
+  position:relative;z-index:1;
+}
+
+/* título grande "CERTIFI / CADOS" */
+.cert-title{
+  font-family:var(--display);
+  font-size:clamp(5rem,13vw,12rem);
+  line-height:.88;
+  letter-spacing:.01em;
+  color:var(--ink);
+  margin-bottom:2rem;
+}
+.cert-title .line{overflow:hidden;display:block}
+.cert-title .line span{
+  display:block;
+  transform:translateY(105%);
+  animation:slideUp .9s cubic-bezier(.16,1,.3,1) both;
+}
+.cert-title .line:nth-child(1) span{animation-delay:1.4s}
+.cert-title .line:nth-child(2) span{animation-delay:1.5s;color:var(--accent)}
+
+/* meta row com stats */
+.cert-hero-meta{
+  display:flex;
+  align-items:center;
+  gap:3.5rem;
+  flex-wrap:wrap;
+  padding-top:1.5rem;
+  border-top:1px solid var(--line);
+  animation:fadeIn .6s 2s both;
+}
+.cert-hero-stat{display:flex;flex-direction:column;gap:.25rem}
+.cert-stat-num{
+  font-family:var(--display);
+  font-size:2rem;line-height:1;
+  color:var(--ink);
+}
+.cert-stat-num.hi{
+  color:var(--accent);
+  text-shadow:0 0 16px rgba(200,240,0,0.35);
+}
+.cert-stat-label{
+  font-family:var(--mono);font-size:.55rem;
+  letter-spacing:.12em;color:var(--ink3);
+  text-transform:uppercase;
+}
+.cert-hero-back{margin-left:auto}
+.cert-back-link{
+  font-family:var(--mono);font-size:.6rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink3);text-decoration:none;
+  border:1px solid var(--line);
+  padding:.45rem 1rem;
+  transition:color .2s,border-color .2s,background .2s;
+  display:inline-block;
+}
+.cert-back-link:hover{
+  color:var(--accent);
+  border-color:rgba(200,240,0,0.3);
+  background:rgba(200,240,0,0.04);
+}
+
+/* grade de certificados */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+/* card de certificado */
+.cert-card{
+  background:var(--bg2);
+  padding:2rem 1.75rem;
+  text-decoration:none;color:inherit;
+  display:flex;flex-direction:column;gap:.85rem;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+  min-height:200px;
+}
+/* glow lift no hover */
+.cert-card::before{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;
+  height:0;
+  background:linear-gradient(to top,rgba(200,240,0,0.05),transparent);
+  transition:height .4s cubic-bezier(.16,1,.3,1);
+}
+/* linha accent no topo ao hover */
+.cert-card::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;
+  height:1px;background:var(--accent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.cert-card:hover{background:var(--bg3)}
+.cert-card:hover::before{height:100%}
+.cert-card:hover::after{transform:scaleX(1)}
+.cert-card:hover .cert-arrow{transform:translate(4px,-4px);color:var(--accent)}
+
+/* card header: plataforma + ano */
+.cert-header{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.cert-platform{
+  font-family:var(--mono);font-size:.55rem;
+  letter-spacing:.15em;color:var(--accent2);
+  text-transform:uppercase;
+}
+.cert-date{
+  font-family:var(--mono);font-size:.52rem;
+  letter-spacing:.08em;color:var(--ink3);
+}
+.cert-name{
+  font-family:var(--sans);font-size:.95rem;
+  font-weight:500;color:var(--ink);
+  line-height:1.45;flex:1;
+}
+.cert-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:.65rem;border-top:1px solid var(--line2);
+  margin-top:auto;
+}
+.cert-status{
+  font-family:var(--mono);font-size:.5rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  padding:.2rem .55rem;
+}
+.cert-arrow{
+  font-size:.9rem;color:var(--ink3);
+  transition:transform .3s cubic-bezier(.16,1,.3,1),color .3s;
+}
+
+/* card vazio */
+.cert-empty{
+  background:var(--bg) !important;
+  justify-content:center;align-items:center;
+  text-align:center;
+}
+
+/* CTA de volta ao portfólio */
+.cert-cta-sec{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:3rem;
+  border-bottom:none;
+}
+.cert-cta-btn{
+  display:flex;align-items:center;gap:1rem;
+  font-family:var(--mono);font-size:.65rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  text-decoration:none;
+  color:var(--ink3);
+  border:1px solid var(--line);
+  padding:1.1rem 1.75rem;
+  position:relative;overflow:hidden;
+  transition:color .25s,border-color .25s;
+  white-space:nowrap;
+}
+.cert-cta-btn::before{
+  content:'';position:absolute;
+  inset:0;background:rgba(200,240,0,0.04);
+  transform:translateX(-100%);
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.cert-cta-btn:hover{color:var(--accent);border-color:rgba(200,240,0,0.3)}
+.cert-cta-btn:hover::before{transform:translateX(0)}
+.cert-cta-btn:hover .cert-cta-arrow{transform:translateX(6px);color:var(--accent)}
+.cert-cta-arrow{
+  font-size:1rem;
+  transition:transform .3s cubic-bezier(.16,1,.3,1),color .3s;
+}
+
+/* link "Ver certificados" no index.html */
+.cert-link{
+  display:inline-block;margin-top:.6rem;
+  font-family:var(--mono);font-size:.52rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);text-decoration:none;
+  transition:color .2s,letter-spacing .25s;
+  position:relative;
+}
+.cert-link::after{
+  content:'';position:absolute;
+  bottom:-2px;left:0;right:0;height:1px;
+  background:var(--accent);
+  transform:scaleX(0);transform-origin:left;
+  transition:transform .25s cubic-bezier(.16,1,.3,1);
+}
+.cert-link:hover{color:var(--ink);letter-spacing:.14em}
+.cert-link:hover::after{transform:scaleX(1)}
+
+/* ── RESPONSIVE (certificados) ───────────────── */
+@media(max-width:768px){
+  #cert-hero{padding:5rem 1.25rem 2.5rem;min-height:50vh}
+  .cert-title{font-size:clamp(3.5rem,17vw,6rem)}
+  .cert-grid{grid-template-columns:1fr}
+  .cert-hero-meta{gap:1.75rem}
+  .cert-hero-back{margin-left:0;width:100%}
+  .cert-cta-sec{grid-template-columns:1fr;gap:2rem}
+  .cert-cta-btn{width:100%;justify-content:center}
+}
+@media(max-width:420px){
+  #cert-hero{padding:4.5rem 1rem 2rem}
+  .cert-title{font-size:clamp(3rem,16vw,5rem)}
+  .cert-card{padding:1.5rem 1.25rem}
+}
+
 /* ── EXTRA KEYFRAMES ─────────────────────────── */
 @keyframes glow2Float{
   from{transform:translate(0,0)}
