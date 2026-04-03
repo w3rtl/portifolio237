@@ -63,12 +63,12 @@
 
     <div class="cert-hero-meta">
       <div class="cert-hero-stat">
-        <span class="cert-stat-num hi">5+</span>
-        <span class="cert-stat-label">Certificações</span>
+        <span class="cert-stat-num hi">6</span>
+        <span class="cert-stat-label">Certificados</span>
       </div>
       <div class="cert-hero-stat">
-        <span class="cert-stat-num">2024</span>
-        <span class="cert-stat-label">Último certificado</span>
+        <span class="cert-stat-num">Jan/2025</span>
+        <span class="cert-stat-label">Mais recente</span>
       </div>
       <div class="cert-hero-stat">
         <span class="cert-stat-num" style="color:var(--accent2)">Alura</span>
@@ -85,22 +85,18 @@
      CERTIFICADOS
 
      COMO ADICIONAR UM CERTIFICADO:
-     Dentro de <div class="cert-grid">, copie o bloco abaixo e preencha:
+     1. Crie a pasta  certs/  dentro do projeto (se não existir)
+     2. Coloque o PDF lá com o nome:  certs/cert-XX.pdf
+     3. Copie um bloco <div class="cert-card reveal" ...>
+     4. Preencha os atributos data-cert-* e o conteúdo interno
 
-     <a class="cert-card reveal" href="URL_DO_CERTIFICADO" target="_blank" rel="noopener">
-       <div class="cert-header">
-         <div class="cert-platform">Alura</div>
-         <div class="cert-date">ANO</div>
-       </div>
-       <div class="cert-name">Nome do Curso</div>
-       <div class="cert-tags">
-         <span class="ptag">Tecnologia</span>
-       </div>
-       <div class="cert-footer">
-         <span class="cert-status status-done">Concluído</span>
-         <span class="cert-arrow">↗</span>
-       </div>
-     </a>
+     RENOMEIE SEUS PDFs ASSIM:
+       cert-01.pdf → Formação: Aprenda a Programar em Python com OO
+       cert-02.pdf → Python: Crie a Sua Primeira Aplicação
+       cert-03.pdf → Python: Aplicando a Orientação a Objetos
+       cert-04.pdf → Python: Começando com a Linguagem
+       cert-05.pdf → Django: Templates e Boas Práticas
+       cert-06.pdf → Certificado Completo (o PDF com todos os cursos)
 ══════════════════════════════════════════════ -->
 <section class="sec" id="certs-python">
   <div class="sec-label">
@@ -109,93 +105,137 @@
 
   <div class="cert-grid">
 
-    <!-- CERT-01 -->
-    <a class="cert-card reveal" href="#" target="_blank" rel="noopener">
+    <!-- CERT-01 — Formação completa -->
+    <div class="cert-card reveal"
+         data-cert-img="certs/cert-01.pdf"
+         data-cert-id="CERT-01"
+         data-cert-name="Formação: Aprenda a Programar em Python com Orientação a Objetos"
+         data-cert-platform="Formação · Alura · Dez/2024">
       <div class="cert-header">
-        <div class="cert-platform">Alura</div>
+        <div class="cert-platform">Alura · Formação</div>
         <div class="cert-date">2024</div>
       </div>
-      <div class="cert-name">Python para Back-end</div>
+      <div class="cert-name">Aprenda a Programar em Python com Orientação a Objetos</div>
+      <div class="cert-tags">
+        <span class="ptag">Python</span>
+        <span class="ptag">POO</span>
+        <span class="ptag">25h</span>
+        <span class="ptag">3 cursos</span>
+      </div>
+      <div class="cert-footer">
+        <span class="cert-status status-done">Concluído</span>
+        <span class="cert-arrow">[ ver ]</span>
+      </div>
+    </div>
+
+    <!-- CERT-02 -->
+    <div class="cert-card reveal"
+         data-cert-img="certs/cert-02.pdf"
+         data-cert-id="CERT-02"
+         data-cert-name="Python: Crie a Sua Primeira Aplicação"
+         data-cert-platform="Curso · Alura · Ago/2024">
+      <div class="cert-header">
+        <div class="cert-platform">Alura · Curso</div>
+        <div class="cert-date">2024</div>
+      </div>
+      <div class="cert-name">Python: Crie a Sua Primeira Aplicação</div>
       <div class="cert-tags">
         <span class="ptag">Python</span>
         <span class="ptag">Back-end</span>
-        <span class="ptag">APIs</span>
+        <span class="ptag">8h</span>
       </div>
       <div class="cert-footer">
         <span class="cert-status status-done">Concluído</span>
-        <span class="cert-arrow">↗</span>
+        <span class="cert-arrow">[ ver ]</span>
       </div>
-    </a>
+    </div>
 
-    <!-- CERT-02 — adicione o link e nome reais -->
-    <a class="cert-card reveal" href="#" target="_blank" rel="noopener">
+    <!-- CERT-03 -->
+    <div class="cert-card reveal"
+         data-cert-img="certs/cert-03.pdf"
+         data-cert-id="CERT-03"
+         data-cert-name="Python: Aplicando a Orientação a Objetos"
+         data-cert-platform="Curso · Alura · Nov/2024">
       <div class="cert-header">
-        <div class="cert-platform">Alura</div>
+        <div class="cert-platform">Alura · Curso</div>
         <div class="cert-date">2024</div>
       </div>
-      <div class="cert-name">Adicione o nome do certificado aqui</div>
+      <div class="cert-name">Python: Aplicando a Orientação a Objetos</div>
       <div class="cert-tags">
         <span class="ptag">Python</span>
+        <span class="ptag">POO</span>
+        <span class="ptag">6h</span>
       </div>
       <div class="cert-footer">
         <span class="cert-status status-done">Concluído</span>
-        <span class="cert-arrow">↗</span>
+        <span class="cert-arrow">[ ver ]</span>
       </div>
-    </a>
+    </div>
 
-    <!-- CERT-03 — adicione o link e nome reais -->
-    <a class="cert-card reveal" href="#" target="_blank" rel="noopener">
+    <!-- CERT-04 -->
+    <div class="cert-card reveal"
+         data-cert-img="certs/cert-04.pdf"
+         data-cert-id="CERT-04"
+         data-cert-name="Python: Começando com a Linguagem"
+         data-cert-platform="Curso · Alura · Mai/2024">
       <div class="cert-header">
-        <div class="cert-platform">Alura</div>
+        <div class="cert-platform">Alura · Curso</div>
         <div class="cert-date">2024</div>
       </div>
-      <div class="cert-name">Adicione o nome do certificado aqui</div>
+      <div class="cert-name">Python: Começando com a Linguagem</div>
       <div class="cert-tags">
         <span class="ptag">Python</span>
+        <span class="ptag">Iniciante</span>
+        <span class="ptag">12h</span>
       </div>
       <div class="cert-footer">
         <span class="cert-status status-done">Concluído</span>
-        <span class="cert-arrow">↗</span>
+        <span class="cert-arrow">[ ver ]</span>
       </div>
-    </a>
+    </div>
 
-    <!-- CERT-04 — adicione o link e nome reais -->
-    <a class="cert-card reveal" href="#" target="_blank" rel="noopener">
+    <!-- CERT-05 -->
+    <div class="cert-card reveal"
+         data-cert-img="certs/cert-05.pdf"
+         data-cert-id="CERT-05"
+         data-cert-name="Django: Templates e Boas Práticas"
+         data-cert-platform="Curso · Alura · Jan/2025">
       <div class="cert-header">
-        <div class="cert-platform">Alura</div>
-        <div class="cert-date">2024</div>
+        <div class="cert-platform">Alura · Curso</div>
+        <div class="cert-date">2025</div>
       </div>
-      <div class="cert-name">Adicione o nome do certificado aqui</div>
+      <div class="cert-name">Django: Templates e Boas Práticas</div>
       <div class="cert-tags">
+        <span class="ptag">Django</span>
         <span class="ptag">Python</span>
+        <span class="ptag">8h</span>
       </div>
       <div class="cert-footer">
         <span class="cert-status status-done">Concluído</span>
-        <span class="cert-arrow">↗</span>
+        <span class="cert-arrow">[ ver ]</span>
       </div>
-    </a>
+    </div>
 
-    <!-- CERT-05 — adicione o link e nome reais -->
-    <a class="cert-card reveal" href="#" target="_blank" rel="noopener">
+    <!-- CERT-06 — Certificado completo -->
+    <div class="cert-card reveal"
+         data-cert-img="certs/cert-06.pdf"
+         data-cert-id="CERT-06"
+         data-cert-name="Certificado Completo — Todos os Cursos Alura"
+         data-cert-platform="Certificado Completo · Alura · 2024–2025">
       <div class="cert-header">
-        <div class="cert-platform">Alura</div>
-        <div class="cert-date">2024</div>
+        <div class="cert-platform">Alura · Completo</div>
+        <div class="cert-date">2024–2025</div>
       </div>
-      <div class="cert-name">Adicione o nome do certificado aqui</div>
+      <div class="cert-name">Certificado Completo — Todos os Cursos</div>
       <div class="cert-tags">
         <span class="ptag">Python</span>
+        <span class="ptag">Django</span>
+        <span class="ptag">POO</span>
+        <span class="ptag">Abr/2024–Jan/2025</span>
       </div>
       <div class="cert-footer">
         <span class="cert-status status-done">Concluído</span>
-        <span class="cert-arrow">↗</span>
-      </div>
-    </a>
-
-    <!-- SLOT VAZIO — próximos certificados -->
-    <div class="cert-card cert-empty reveal">
-      <div class="proj-empty-icon">[ + ]</div>
-      <div class="proj-empty-text">
-        Próximo certificado<br/>em andamento
+        <span class="cert-arrow">[ ver ]</span>
       </div>
     </div>
 
@@ -228,6 +268,67 @@
   <div>Sumaré, SP — Brasil</div>
 </footer>
 
+<!-- ── MODAL DE CERTIFICADO ───────────────────── -->
+<div id="cert-modal" role="dialog" aria-modal="true" aria-label="Visualizar certificado">
+  <div class="cm-overlay"></div>
+  <div class="cm-box">
+    <div class="cm-header">
+      <span class="cm-id">CERT-01</span>
+      <span class="cm-platform">Alura · 2024</span>
+      <button class="cm-close" aria-label="Fechar">[ ESC ]</button>
+    </div>
+    <div class="cm-img-wrap">
+      <iframe class="cm-frame" src="" title="Certificado" allowfullscreen></iframe>
+      <div class="cm-scan"></div>
+    </div>
+    <div class="cm-footer">
+      <span class="cm-name"></span>
+      <span class="cm-hint">ESC ou clique fora para fechar</span>
+    </div>
+  </div>
+</div>
+
 <script src="main.js"></script>
+<script>
+/* ── MODAL DE CERTIFICADOS ───────────────────── */
+(function initCertModal() {
+  var modal    = document.getElementById('cert-modal');
+  if (!modal) return;
+
+  var overlay  = modal.querySelector('.cm-overlay');
+  var frame    = modal.querySelector('.cm-frame');
+  var idEl     = modal.querySelector('.cm-id');
+  var nameEl   = modal.querySelector('.cm-name');
+  var platEl   = modal.querySelector('.cm-platform');
+  var closeBtn = modal.querySelector('.cm-close');
+
+  function openModal(card) {
+    var src = card.dataset.certImg;
+    if (!src) return;
+    frame.src          = src;
+    idEl.textContent   = card.dataset.certId       || 'CERT';
+    nameEl.textContent = card.dataset.certName     || '';
+    platEl.textContent = card.dataset.certPlatform || 'Alura';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(function() { frame.src = ''; }, 350);
+  }
+
+  document.querySelectorAll('.cert-card[data-cert-img]').forEach(function(card) {
+    card.addEventListener('click', function() { openModal(card); });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
+})();
+</script>
 </body>
 </html>

@@ -1106,6 +1106,97 @@ footer{
 .cert-link:hover{color:var(--ink);letter-spacing:.14em}
 .cert-link:hover::after{transform:scaleX(1)}
 
+/* cursor pointer nos cards clicáveis */
+.cert-card[data-cert-img]{cursor:pointer}
+.cert-card[data-cert-img] .cert-arrow{
+  font-family:var(--mono);font-size:.5rem;
+  letter-spacing:.1em;text-transform:uppercase;
+}
+
+/* ── MODAL DE CERTIFICADO ────────────────────── */
+#cert-modal{
+  position:fixed;inset:0;
+  z-index:8500;
+  display:flex;align-items:center;justify-content:center;
+  padding:1.5rem;
+  opacity:0;pointer-events:none;
+  transition:opacity .3s;
+}
+#cert-modal.open{opacity:1;pointer-events:auto}
+.cm-overlay{
+  position:absolute;inset:0;
+  background:rgba(13,13,11,0.95);
+  backdrop-filter:blur(10px);
+}
+.cm-box{
+  position:relative;z-index:1;
+  background:var(--bg2);
+  border:1px solid var(--line);
+  width:100%;max-width:900px;
+  max-height:92vh;
+  display:flex;flex-direction:column;
+  transform:translateY(20px) scale(.98);
+  transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+#cert-modal.open .cm-box{transform:translateY(0) scale(1)}
+/* corner brackets no modal */
+.cm-box::before,.cm-box::after{
+  content:'';position:absolute;
+  width:14px;height:14px;
+  border-color:rgba(200,240,0,0.45);
+  border-style:solid;pointer-events:none;
+}
+.cm-box::before{top:-1px;left:-1px;border-width:1px 0 0 1px}
+.cm-box::after{bottom:-1px;right:-1px;border-width:0 1px 1px 0}
+.cm-header{
+  display:flex;align-items:center;gap:1rem;
+  padding:.65rem 1.25rem;
+  border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:.58rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  flex-shrink:0;
+}
+.cm-id{color:var(--accent)}
+.cm-platform{color:var(--accent2);margin-right:auto}
+.cm-close{
+  background:none;border:1px solid var(--line);
+  color:var(--ink3);font-family:var(--mono);
+  font-size:.55rem;letter-spacing:.1em;
+  padding:.3rem .65rem;cursor:pointer;
+  transition:color .2s,border-color .2s,background .2s;
+}
+.cm-close:hover{
+  color:var(--accent);
+  border-color:rgba(200,240,0,0.35);
+  background:rgba(200,240,0,0.04);
+}
+.cm-img-wrap{
+  position:relative;overflow:hidden;
+  flex:1;min-height:0;
+  background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+}
+.cm-img{
+  max-width:100%;max-height:calc(92vh - 110px);
+  object-fit:contain;display:block;
+}
+.cm-scan{
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 2px,
+    rgba(0,0,0,0.03) 2px,rgba(0,0,0,0.03) 4px
+  );
+  pointer-events:none;
+}
+.cm-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:.6rem 1.25rem;
+  border-top:1px solid var(--line);
+  font-family:var(--mono);flex-shrink:0;
+}
+.cm-name{font-size:.65rem;letter-spacing:.06em;color:var(--ink)}
+.cm-hint{font-size:.5rem;letter-spacing:.12em;color:var(--ink3);text-transform:uppercase}
+
 /* ── RESPONSIVE (certificados) ───────────────── */
 @media(max-width:768px){
   #cert-hero{padding:5rem 1.25rem 2.5rem;min-height:50vh}
@@ -1115,6 +1206,10 @@ footer{
   .cert-hero-back{margin-left:0;width:100%}
   .cert-cta-sec{grid-template-columns:1fr;gap:2rem}
   .cert-cta-btn{width:100%;justify-content:center}
+  /* modal mobile */
+  #cert-modal{padding:.5rem}
+  .cm-hint{display:none}
+  .cm-header{gap:.5rem}
 }
 @media(max-width:420px){
   #cert-hero{padding:4.5rem 1rem 2rem}
