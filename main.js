@@ -226,6 +226,32 @@
   });
 })();
 
+/* ── STAMP TYPEWRITER ────────────────────────── */
+(function initStampType() {
+  const stamp = document.querySelector('.stamp');
+  if (!stamp) return;
+
+  const dot = stamp.querySelector('.stamp-dot');
+  const full = [...stamp.childNodes]
+    .filter(n => n.nodeType === 3)
+    .map(n => n.textContent.trim())
+    .filter(Boolean)
+    .join(' ');
+
+  stamp.innerHTML = '';
+  if (dot) stamp.appendChild(dot);
+  const out = document.createElement('span');
+  stamp.appendChild(out);
+
+  let i = 0;
+  setTimeout(() => {
+    const iv = setInterval(() => {
+      out.textContent = '\u00a0' + full.slice(0, ++i) + (i < full.length ? '_' : '');
+      if (i >= full.length) clearInterval(iv);
+    }, 65);
+  }, 2300);
+})();
+
 /* ── LIVE CLOCK in topbar / footer ──────────── */
 (function initClock() {
   const el = document.getElementById('live-time');
