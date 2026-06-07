@@ -3,485 +3,228 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>PBR-SYS // Pedro Barbieri Ramin</title>
+<title>Pedro Barbieri Ramin — Desenvolvedor Back-end</title>
 <link rel="icon" type="image/png" href="icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- SCROLL PROGRESS -->
-<div id="scroll-progress"></div>
-
-<!-- CURSOR -->
-<div id="cur"></div>
-<div id="cur-ring"></div>
-
-<!-- COPY TOAST -->
-<div class="copy-toast" id="copy-toast"></div>
-
-<!-- ── LOADER ─────────────────────────────────── -->
-<div id="loader">
-  <div class="ld-label">Inicializando sistema</div>
-  <div class="ld-bar-wrap"><div class="ld-bar"></div></div>
-  <div class="ld-pct">0%</div>
-</div>
-
 <!-- ── TOPBAR ─────────────────────────────────── -->
-<div id="topbar">
-  <div class="tb-left">
-    <div class="tb-dot"></div>
-    <span class="tb-sys">PBR-SYS v1.1</span>
-    <span>// Perfil de Desenvolvedor</span>
-  </div>
-  <nav class="tb-right">
-    <a class="tb-nav" href="#sobre">Sobre</a>
-    <a class="tb-nav" href="#habilidades">Skills</a>
-    <a class="tb-nav" href="#conhecimentos">Conhecimentos</a>
-    <a class="tb-nav" href="#projetos">Projetos</a>
-    <a class="tb-nav" href="#formacao">Formação</a>
-    <a class="tb-nav" href="#contato">Contato</a>
+<header id="topbar">
+  <a class="tb-brand" href="#top">Pedro Barbieri Ramin</a>
+  <nav class="tb-nav">
+    <a href="#sobre">Sobre<sup>01</sup></a>
+    <a href="#habilidades">Habilidades<sup>02</sup></a>
+    <a href="#conhecimentos">Conhecimentos<sup>03</sup></a>
+    <a href="#projetos">Projetos<sup>04</sup></a>
+    <a href="#formacao">Formação<sup>05</sup></a>
+    <a href="#contato">Contato<sup>06</sup></a>
   </nav>
-</div>
+</header>
 
 <!-- ── HERO ───────────────────────────────────── -->
-<section id="hero">
-  <div class="h-grid"></div>
-  <div class="h-glow"></div>
-  <div class="h-glow2"></div>
-
-  <div class="hero-widgets">
-    <div class="widget">
-      Status do Sistema
-      <div class="widget-val green">● Online</div>
-    </div>
-    <div class="widget">
-      Disponibilidade
-      <div class="widget-val amber">Aberto a vagas</div>
-    </div>
-    <div class="widget">
-      Localização
-      <div class="widget-val">Sumaré, SP</div>
-    </div>
-    <div class="widget">
-      Horário de Brasília
-      <div class="widget-val" id="live-time">--:--:--</div>
-    </div>
-  </div>
-
-  <div class="hero-main">
-    <div class="stamp">
-      <span class="stamp-dot"></span>
-      Desenvolvedor Backend
-    </div>
+<section class="hero" id="top">
+  <div class="hero-banner">
     <h1 class="hero-name">
-      <span class="line"><span>PEDRO</span></span>
-      <span class="line"><span>BARBIERI</span></span>
-      <span class="line"><span>RAMIN</span></span>
+      <span class="reveal-line"><span>Pedro</span></span>
+      <span class="reveal-line"><span>Barbieri</span></span>
+      <span class="reveal-line"><span>Ramin</span></span>
     </h1>
   </div>
 
   <div class="hero-meta">
-    <div class="hero-role">
-      Backend · APIs · Automação · Sistemas<br/>
-      Python · Django · Node.js · SQL
+    <div class="hero-meta-item">
+      <span class="hero-meta-k">Função</span>
+      <span class="hero-meta-v">Desenvolvedor Back-end</span>
     </div>
-    <div class="hero-coords">
-      <span>LAT</span> −22.8208° S<br/>
-      <span>LNG</span> −47.2670° W<br/>
-      <span>TZ</span> America/Sao_Paulo
+    <div class="hero-meta-item">
+      <span class="hero-meta-k">Stack</span>
+      <span class="hero-meta-v">Python · Django · SQL</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-k">Local</span>
+      <span class="hero-meta-v">Sumaré, SP — Brasil</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="hero-meta-k">Disponibilidade</span>
+      <span class="hero-meta-v accent">Aberto a vagas</span>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     SOBRE
-══════════════════════════════════════════════ -->
+<!-- ══════════════ 01 · SOBRE ══════════════ -->
 <section class="sec" id="sobre">
-  <div class="sec-label">
-    <span class="sec-num">01</span> Sobre
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2 class="sec-title">Sobre</h2>
   </div>
+
   <div class="inner">
-    <div class="sobre-text reveal-l">
+    <div class="sobre-text reveal">
       <p>
-        Olá — sou <strong>Pedro Barbieri Ramin</strong>, desenvolvedor backend em <strong>Sumaré, SP</strong>. 
-        Gosto de construir sistemas que resolvem problemas reais, com código limpo e arquiteturas que fazem sentido da forma mais eficaz possivel.
+        Olá — sou <strong>Pedro Barbieri Ramin</strong>, desenvolvedor backend em <strong>Sumaré, SP</strong>.
+        Gosto de construir sistemas que resolvem problemas reais, com código limpo e arquiteturas que fazem sentido da forma mais eficaz possível.
       </p>
       <p>
-        Trabalho principalmente com <strong>Python</strong> e bancos de dados relacionais. 
+        Trabalho principalmente com <strong>Python</strong> e bancos de dados relacionais.
         Sou organizado, me comunico bem e entrego tanto em <strong>equipe</strong> quanto de forma independente.
       </p>
       <p>
         Tenho <strong>facilidade</strong> para comunicar e organizar pessoas.
-        Já <strong>liderei</strong> pequenos grupos, defini funções dentro de equipes e <span class= "hi">resolvi conflitos</span> sem deixar o ambiente pesado. 
+        Já <strong>liderei</strong> pequenos grupos, defini funções dentro de equipes e <span class="hi">resolvi conflitos</span> sem deixar o ambiente pesado.
         Trabalho com metodologia <strong>Scrum</strong> e acredito que um time bem alinhado entrega muito mais do que a soma das partes.
       </p>
       <p>Atualmente <span class="hi">aberto a oportunidades</span> — freelance, CLT ou PJ. Se tem um problema interessante, pode me chamar.</p>
     </div>
 
-    <div class="metrics reveal">
-      <div class="metrics-head">
-        Indicadores <span>● Ao vivo</span>
+    <!-- bloco de fatos (ex-métricas) — me confirme os valores reais -->
+    <div class="facts reveal">
+      <div class="fact-row">
+        <span class="fact-k">Projetos em andamento</span>
+        <span class="fact-v">2</span>
       </div>
-      <div class="metric-row">
-        <span class="metric-key">Experiência</span>
-        <span class="metric-val hi" data-count="3" data-suffix=" anos">Ainda nenhuma</span>
+      <div class="fact-row">
+        <span class="fact-k">Linguagens</span>
+        <span class="fact-v">6+</span>
       </div>
-      <div class="metric-row">
-        <span class="metric-key">Projetos entregues</span>
-        <span class="metric-val hi" data-count="4" data-suffix="+">1</span>
+      <div class="fact-row">
+        <span class="fact-k">Localização</span>
+        <span class="fact-v">Sumaré, SP</span>
       </div>
-      <div class="metric-row">
-        <span class="metric-key">Linguagens</span>
-        <span class="metric-val hi">6+</span>
-      </div>
-      <div class="metric-row">
-        <span class="metric-key">Status</span>
-        <span class="metric-val hi">● Disponível</span>
+      <div class="fact-row">
+        <span class="fact-k">Status</span>
+        <span class="fact-v accent">Disponível</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     HABILIDADES
-══════════════════════════════════════════════ -->
+<!-- ══════════════ 02 · HABILIDADES ══════════════ -->
 <section class="sec" id="habilidades">
-  <div class="sec-label">
-    <span class="sec-num">02</span> Habilidades
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2 class="sec-title">Habilidades</h2>
   </div>
 
-  <div class="skill-blocks">
-
-    <!-- BACK-END -->
-    <div class="skill-block reveal">
-      <div class="sb-head">
-        Back-end
-        <span class="sb-head-count">05</span>
-      </div>
-
-      <div class="skill-row">
-        <span class="sk-name">Python</span>
-        <span class="sk-lvl lvl-hi">Avançado</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar" style="--w:.92"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">Django</span>
-        <span class="sk-lvl lvl-mid">Básico</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar" style="--w:.88"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">Banco de dados</span>
-        <span class="sk-lvl lvl-mid">Intermediário</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar mid" style="--w:.65"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">POO</span>
-        <span class="sk-lvl lvl-mid">Intermediário</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar mid" style="--w:.58"></div>
-        </div>
-      </div>
+  <div class="list-groups">
+    <div class="lg reveal">
+      <div class="lg-head">Back-end</div>
+      <div class="lg-row"><span class="lg-name">Python</span><span class="lg-meta hi">Avançado</span></div>
+      <div class="lg-row"><span class="lg-name">Django</span><span class="lg-meta">Básico</span></div>
+      <div class="lg-row"><span class="lg-name">Banco de dados</span><span class="lg-meta">Intermediário</span></div>
+      <div class="lg-row"><span class="lg-name">POO</span><span class="lg-meta">Intermediário</span></div>
     </div>
 
-    <!-- BANCO DE DADOS -->
-    <div class="skill-block reveal">
-      <div class="sb-head">
-        Banco de Dados
-        <span class="sb-head-count">04</span>
-      </div>
-
-      <div class="skill-row">
-        <span class="sk-name">PhpMyAdmin</span>
-        <span class="sk-lvl lvl-hi">Intermediário</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar" style="--w:.85"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">Firebase</span>
-        <span class="sk-lvl lvl-mid">Básico</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar mid" style="--w:.70"></div>
-        </div>
-      </div>
+    <div class="lg reveal">
+      <div class="lg-head">Banco de Dados</div>
+      <div class="lg-row"><span class="lg-name">PhpMyAdmin</span><span class="lg-meta">Intermediário</span></div>
+      <div class="lg-row"><span class="lg-name">Firebase</span><span class="lg-meta">Básico</span></div>
     </div>
-
-    <!-- INFRA / TOOLS -->
-<!-- <div class="skill-block reveal">
-      <div class="sb-head">
-        Infra &amp; Tools
-        <span class="sb-head-count">05</span>
-      </div>
-
-      <div class="skill-row">
-        <span class="sk-name">Docker</span>
-        <span class="sk-lvl lvl-mid">Intermediário</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar mid" style="--w:.72"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">Git / GitHub</span>
-        <span class="sk-lvl lvl-mid">Intermediário</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar" style="--w:.88"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">Linux / Bash</span>
-        <span class="sk-lvl lvl-mid">Intermediário</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar mid" style="--w:.68"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">Nginx</span>
-        <span class="sk-lvl lvl-mid">Básico</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar lo" style="--w:.45"></div>
-        </div>
-      </div>
-      <div class="skill-row">
-        <span class="sk-name">CI/CD</span>
-        <span class="sk-lvl lvl-lo">Básico</span>
-        <div class="sk-bar-wrap">
-          <div class="sk-bar lo" style="--w:.38"></div>
-        </div>
-      </div>
-    </div> -->
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     CONHECIMENTOS TÉCNICOS
-══════════════════════════════════════════════ -->
+<!-- ══════════════ 03 · CONHECIMENTOS ══════════════ -->
 <section class="sec" id="conhecimentos">
-  <div class="sec-label">
-    <span class="sec-num">03</span> Conhecimentos Técnicos
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">Conhecimentos</h2>
   </div>
 
-  <div class="kb-grid">
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-01</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Banco de Dados</div>
-      <div class="kb-tags">
-        <span class="ptag">MySQL</span>
-        <span class="ptag">SQL</span>
-        <span class="ptag">Diagrama ER</span>
-      </div>
+  <div class="kb-index">
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Banco de Dados</div>
+      <div class="kb-line-tags"><span>MySQL</span><span>SQL</span><span>Diagrama ER</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-02</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Programação para Internet</div>
-      <div class="kb-tags">
-        <span class="ptag">HTML</span>
-        <span class="ptag">CSS</span>
-        <span class="ptag">PHP</span>
-        <span class="ptag">CRUD</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Programação para Internet</div>
+      <div class="kb-line-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>CRUD</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-03</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">TCC &amp; Técnicas Operacionais</div>
-      <div class="kb-tags">
-        <span class="ptag">Scrum</span>
-        <span class="ptag">Estudos de caso</span>
-        <span class="ptag">Asana</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">TCC &amp; Técnicas Operacionais</div>
+      <div class="kb-line-tags"><span>Scrum</span><span>Estudos de caso</span><span>Asana</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-04</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Inteligência Artificial</div>
-      <div class="kb-tags">
-        <span class="ptag">Orange</span>
-        <span class="ptag">Naive Bayes</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Inteligência Artificial</div>
+      <div class="kb-line-tags"><span>Orange</span><span>Naive Bayes</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-05</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Orientação a Objetos</div>
-      <div class="kb-tags">
-        <span class="ptag">C#</span>
-        <span class="ptag">.NET</span>
-        <span class="ptag">Windows Forms</span>
-        <span class="ptag">Python</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Orientação a Objetos</div>
+      <div class="kb-line-tags"><span>C#</span><span>.NET</span><span>Windows Forms</span><span>Python</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-06</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Dispositivos Móveis</div>
-      <div class="kb-tags">
-        <span class="ptag">Flutter</span>
-        <span class="ptag">FlutterFlow</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Dispositivos Móveis</div>
+      <div class="kb-line-tags"><span>Flutter</span><span>FlutterFlow</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-07</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Programação para Jogos</div>
-      <div class="kb-tags">
-        <span class="ptag">Unity</span>
-        <span class="ptag">C#</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Programação para Jogos</div>
+      <div class="kb-line-tags"><span>Unity</span><span>C#</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-08</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">Robótica</div>
-      <div class="kb-tags">
-        <span class="ptag">Tinkercad</span>
-        <span class="ptag">C++</span>
-        <span class="ptag">Arduino Uno</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">Robótica</div>
+      <div class="kb-line-tags"><span>Tinkercad</span><span>C++</span><span>Arduino Uno</span></div>
     </div>
-
-    <div class="kb-card reveal">
-      <div class="kb-header">
-        <span class="kb-id">KB-09</span>
-        <span class="kb-dot"></span>
-      </div>
-      <div class="kb-title">SO &amp; Redes</div>
-      <div class="kb-tags">
-        <span class="ptag">Topologias de rede</span>
-        <span class="ptag">Tipos de rede</span>
-      </div>
+    <div class="kb-line reveal">
+      <div class="kb-line-title">SO &amp; Redes</div>
+      <div class="kb-line-tags"><span>Topologias de rede</span><span>Tipos de rede</span></div>
     </div>
-
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     PROJETOS
-
-     ADICIONAR UM PROJETO:
-     Dentro de <div class="proj-list">:
-
-     <a class="proj-item reveal" href="URL" target="_blank" rel="noopener">
-       <div class="proj-header">
-         <div class="proj-id">PRJ-XX</div>
-         <div class="proj-status status-done">Concluído</div>
-       </div>
-       <div class="proj-name">Nome</div>
-       <div class="proj-desc">Descrição curta.</div>
-       <div class="proj-footer">
-         <div class="proj-tags">
-           <span class="ptag">Python</span>
-         </div>
-         <div class="proj-arrow">→</div>
-       </div>
-     </a>
-
-     Classes de status:
-       status-done  → Concluído
-       status-dev   → Em Desenvolvimento
-       status-soon  → Em Breve
+<!-- ══════════════ 04 · PROJETOS ══════════════
+     ADICIONAR PROJETO — copie um bloco <a class="proj-item">:
+       status-done → Concluído | status-dev → Em desenvolvimento | status-soon → Em breve
 ══════════════════════════════════════════════ -->
 <section class="sec" id="projetos">
-  <div class="sec-label">
-    <span class="sec-num">04</span> Projetos
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">Projetos</h2>
   </div>
 
   <div class="proj-list">
 
-    <!-- PRJ-01 -->
     <a class="proj-item reveal" href="https://www.employmee.com.br/" target="_blank" rel="noopener">
-      <div class="proj-header">
-        <div class="proj-id">PRJ-01</div>
-        <div class="proj-status status-done">Em Desenvolvimento</div>
-      </div>
-      <div class="proj-name">Employmee</div>
-      <div class="proj-desc">
-        Um projeto que busca revolucionar o processo de recrutamento tanto para empresas, tanto para candidatos.
-        Utiliza IA e outras APIs para seu funcionamento, com beta planejada para 2026.
-      </div>
-      <div class="proj-footer">
-        <div class="proj-tags">
-          <span class="ptag">Python</span>
-          <span class="ptag">IA</span>
-          <span class="ptag">Planejamento</span>
+      <div class="proj-index">01</div>
+      <div class="proj-main">
+        <div class="proj-name">Employmee</div>
+        <div class="proj-desc">
+          Um projeto que busca revolucionar o processo de recrutamento tanto para empresas quanto para candidatos.
+          Utiliza IA e outras APIs para seu funcionamento, com beta planejada para 2026.
         </div>
-        <div class="proj-arrow">→</div>
+        <div class="proj-tags"><span>Python</span><span>IA</span><span>Planejamento</span></div>
+      </div>
+      <div class="proj-side">
+        <span class="proj-status status-dev">Em desenvolvimento</span>
+        <span class="proj-arrow">↗</span>
       </div>
     </a>
 
-    <!-- PRJ-02 -->
     <a class="proj-item reveal" href="#" target="_blank" rel="noopener">
-      <div class="proj-header">
-        <div class="proj-id">PRJ-02</div>
-        <div class="proj-status status-dev">Fase de planejamento</div>
-      </div>
-      <div class="proj-name">Chordia</div>
-      <div class="proj-desc">
-        Uma plataforma de ensino de instrumentos musicais estilo duolingo, fácil, prático e cativante.
-        Atualmente reunindo um time e planejando mais sobre, com versões betas esperadas ainda para esse ano.
-      </div>
-      <div class="proj-footer">
-        <div class="proj-tags">
-          <span class="ptag">Liderança</span>
-          <span class="ptag">Desing</span>
-          <span class="ptag">Github</span>
+      <div class="proj-index">02</div>
+      <div class="proj-main">
+        <div class="proj-name">Chordia</div>
+        <div class="proj-desc">
+          Uma plataforma de ensino de instrumentos musicais no estilo Duolingo — fácil, prática e cativante.
+          Atualmente reunindo um time e planejando, com versões beta esperadas ainda para este ano.
         </div>
-        <div class="proj-arrow">→</div>
+        <div class="proj-tags"><span>Liderança</span><span>Design</span><span>GitHub</span></div>
+      </div>
+      <div class="proj-side">
+        <span class="proj-status status-soon">Fase de planejamento</span>
+        <span class="proj-arrow">↗</span>
       </div>
     </a>
-
-    <!-- SLOT VAZIO -->
-    <div class="proj-item proj-empty reveal">
-      <div class="proj-empty-icon">[ + ]</div>
-      <div class="proj-empty-text">
-        Próximo projeto<br/>em construção
-      </div>
-    </div>
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     FORMAÇÃO
-══════════════════════════════════════════════ -->
+<!-- ══════════════ 05 · FORMAÇÃO ══════════════ -->
 <section class="sec" id="formacao">
-  <div class="sec-label">
-    <span class="sec-num">05</span> Formação
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">Formação</h2>
   </div>
 
   <div class="timeline">
@@ -489,11 +232,11 @@
     <div class="tl-item reveal">
       <div class="tl-left">
         <span class="tl-year">2026 →</span>
-        Em curso
+        <span class="tl-phase">Em curso</span>
       </div>
       <div class="tl-right">
-        <div class="tl-course">Sistemas de informação</div>
-        <div class="tl-inst">UNASP - Hortolândia</div>
+        <div class="tl-course">Sistemas de Informação</div>
+        <div class="tl-inst">UNASP — Hortolândia</div>
         <span class="tl-tag">Em andamento</span>
       </div>
     </div>
@@ -501,11 +244,11 @@
     <div class="tl-item reveal">
       <div class="tl-left">
         <span class="tl-year">2025</span>
-        Ensino médio
+        <span class="tl-phase">Ensino médio</span>
       </div>
       <div class="tl-right">
         <div class="tl-course">Técnico em TI</div>
-        <div class="tl-inst">Diversos projetos nos quais utilizei as linguagens listadas no currículo</div>
+        <div class="tl-inst">Diversos projetos nos quais utilizei as linguagens listadas no currículo.</div>
         <span class="tl-tag amber">Concluído</span>
       </div>
     </div>
@@ -513,91 +256,77 @@
     <div class="tl-item reveal">
       <div class="tl-left">
         <span class="tl-year">2024</span>
-        Certificação
+        <span class="tl-phase">Certificação</span>
       </div>
       <div class="tl-right">
         <div class="tl-course">Python</div>
-        <div class="tl-inst">Diversos cursos de Python (Com certificação Alura)<p>Clique em "Ver certificados" para conferir!</p></div>
+        <div class="tl-inst">
+          Diversos cursos de Python com certificação Alura.
+          <p>Clique em "Ver certificados" para conferir.</p>
+        </div>
         <span class="tl-tag amber">Concluído</span>
-        <a class="cert-link" href="certificados.html">Ver certificados →</a>
+        <a class="cert-link" href="certificados.html">Ver certificados ↗</a>
       </div>
     </div>
-
-    
 
   </div>
 </section>
 
-<!-- ══════════════════════════════════════════════
-     CONTATO
-══════════════════════════════════════════════ -->
+<!-- ══════════════ 06 · CONTATO ══════════════ -->
 <section class="sec" id="contato">
-  <div class="sec-label">
-    <span class="sec-num">06</span> Contato
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title">Contato</h2>
   </div>
 
   <div class="contact-wrap">
-    <div class="reveal-l">
-      <div class="contact-cta">
-        VAMOS<br/><span class="hi">TRABALHAR</span><br/>JUNTOS?
-      </div>
-      <div class="contact-note">
-        Disponível para projetos freelance,<br/>
-        oportunidades CLT/PJ e parcerias.
-      </div>
+    <div class="reveal">
+      <div class="contact-cta">Vamos trabalhar <span class="hi">juntos?</span></div>
+      <p class="contact-note">
+        Disponível para projetos freelance, oportunidades CLT/PJ e parcerias.
+      </p>
     </div>
 
     <div class="contact-links reveal">
-
-      <!-- E-mail — clique copia o endereço -->
       <a class="clink" href="mailto:pedrob.ramin@gmail.com" data-copy="pedrob.ramin@gmail.com">
         <div>
           <div class="cl-label">E-mail</div>
           <div class="cl-val">pedrob.ramin@gmail.com</div>
         </div>
-        <div class="cl-arrow">↗</div>
+        <span class="cl-arrow">↗</span>
       </a>
-
-      <!-- GitHub -->
       <a class="clink" href="https://github.com/w3rtl" target="_blank" rel="noopener">
         <div>
           <div class="cl-label">GitHub</div>
           <div class="cl-val">github.com/w3rtl</div>
         </div>
-        <div class="cl-arrow">↗</div>
+        <span class="cl-arrow">↗</span>
       </a>
-
-      <!-- LinkedIn -->
       <a class="clink" href="https://linkedin.com/in/pedro-barbieri33" target="_blank" rel="noopener">
         <div>
           <div class="cl-label">LinkedIn</div>
           <div class="cl-val">linkedin.com/in/pedro-barbieri33</div>
         </div>
-        <div class="cl-arrow">↗</div>
+        <span class="cl-arrow">↗</span>
       </a>
-
-      <!-- WhatsApp — clique copia o número -->
       <a class="clink" href="https://wa.me/5519992337953?text=Olá,%20vim%20pelo%20portifólio!%0A%20proposta%20é%20a%20seguinte:%20" data-copy="+55 19 9 9233-7953">
         <div>
           <div class="cl-label">WhatsApp</div>
           <div class="cl-val">+55 19 9 9233-7953</div>
         </div>
-        <div class="cl-arrow">↗</div>
+        <span class="cl-arrow">↗</span>
       </a>
-
     </div>
   </div>
 </section>
 
 <!-- ── FOOTER ──────────────────────────────────── -->
 <footer>
-  <div class="ft-status">
-    <div class="ft-dot"></div>
-    PBR-SYS v1.1 — Todos os direitos reservados ©️
-  </div>
   <div>© 2026 Pedro Barbieri Ramin</div>
   <div>Sumaré, SP — Brasil</div>
 </footer>
+
+<div class="copy-toast" id="copy-toast"></div>
 
 <script src="main.js"></script>
 </body>
